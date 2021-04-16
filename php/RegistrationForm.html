@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <title>Registration</title>
+</head>
+<body class="form">
+
+        <div class="container" >
+
+            <div class="title"><img src="../images/logo.png"> <span>Registration</span></div>
+
+            <form action="form.php" method="POST">
+
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text" name="fullname" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Username</span>
+                        <input type="text" name="username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input type="email" name="email" placeholder="Enter your Email" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Phone</span>
+                        <input type="number" name="phone" placeholder="Enter your phone number" required> 
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Interests</span>
+                        <input type="text" name="interests" placeholder="Interests" required>
+                    </div>
+                    <div class="input-box">
+                        <label class="details">Comments</label>
+                        <input type="text" name="Comments" placeholder="Comments Here" required>
+                    </div>
+                   
+                </div>
+
+                <div class="gender-details">
+                    <input type="radio" name="gender" id="dot-1" value="Male">
+                    <input type="radio" name="gender" id="dot-2" value="Female">
+                    <input type="radio" name="gender" id="dot-3" value="Other">
+                    <span class="gender"-title>Gender</span>
+                    <div class="category">
+                        <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="gender">Male</span>
+                        </label>
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="gender">Female</span>
+                        </label>
+                        <label for="dot-3">
+                            <span class="dot three"></span>
+                            <span class="gender">Other</span>
+                        </lable>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Register" name="reg">
+                    <input type="reset" value="Reset">
+
+                </div>
+            </form>
+
+        </div>
+
+   
+</body>
+</html>
