@@ -19,7 +19,7 @@ $fullname=$_POST['fullname'];
  $gender=$_POST['gender'];
 
     
-    $sql = "INSERT INTO register_info(full_name,user_name,email,phone,interests,gender) VALUES('$fullname','$username','$email','$phone','$address','$gender')";
+    $sql = "INSERT INTO register_info(full_name,user_name,email,phone,address,gender) VALUES('$fullname','$username','$email','$phone','$address','$gender')";
 
     if(mysqli_query($conn,$sql)){
         echo 'Successfully Inserted';
