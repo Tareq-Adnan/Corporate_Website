@@ -17,13 +17,13 @@ window.open(a,'_top');
 });
 
 let btn2=document.getElementById("contact");
-var con='./Corporate/#cntct';
+var con='../Corporate/#cntct';
 btn2.addEventListener('click', ()=>{
     window.open(con,'_top');
 });
 
 let btn3=document.getElementById("contact1");
-var con='./Corporate/#cntct';
+var con="../Corporate/#cntct";
 btn3.addEventListener('click', ()=>{
     window.open(con,'_top');
 });
