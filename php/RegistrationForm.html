@@ -14,41 +14,48 @@
 
             <div class="title"><img src="../images/logo.png"> <span>Registration</span></div>
 
-            <form action="form.php" method="POST">
+            <form action="form.php" method="POST" onsubmit="return Check(this)">
 
                 <div class="user-details">
                     <div class="input-box">
                         <span class="details">Full Name</span>
-                        <input type="text" name="fullname" placeholder="Enter your name" required>
+                        <input type="text" name="fullname" id="name" placeholder="Enter your name" >
+                        <p class="warning" id="warname"></p>
                     </div>
                     <div class="input-box">
                         <span class="details">Username</span>
-                        <input type="text" name="username" placeholder="Enter your username" required>
+                        <input type="text" name="username" id="username" placeholder="Enter your username" >
+                        <p class="warning" id="warusername"></p>
                     </div>
                     <div class="input-box">
                         <span class="details">Password</span>
-                        <input type="password" name="password" placeholder="Password" required>
+                        <input type="password" name="password" id="password" placeholder="Password" >
+                        <p class="warning" id="warpass"></p>
                     </div>
                     <div class="input-box">
                         <span class="details">Confirm Password</span>
-                        <input type="password" name="conpassword" placeholder="Confirm Password" required>
+                        <input type="password" name="conpassword" id="conpassword" placeholder="Confirm Password" >
+                        <p class="warning" id="warconpass"></p>
                     </div>
                     <div class="input-box">
                         <span class="details">Email</span>
-                        <input type="email" name="email" placeholder="Enter your Email" required>
+                        <input type="email" name="email" id="email" placeholder="Enter your Email" >
+                        <p class="warning" id="waremail"></p>
                     </div>
                     <div class="input-box">
                         <span class="details">Phone</span>
-                        <input type="number" name="phone" placeholder="Enter your phone number" required> 
+                        <input type="number" name="phone" id="sel" placeholder="Enter your phone number" > 
+                        <p class="warning" id="warphone"></p>
                     </div>
 
                     <div class="input-box">
                         <span class="details">Address</span>
-                        <input type="text" name="address" placeholder="Enter your address" required> 
+                        <input type="text" name="address" id="address" placeholder="Enter your address" > 
                     </div>
                     <div class="input-box">
                         <span class="details">Comments</span>
-                        <input type="text" name="commentss" placeholder="Comments" required> 
+                        <input type="text" name="commentss" id="comments" placeholder="Comments" > 
+                        <p class="warning" id="warcom"></p>
                     </div>
                    
                 </div>
@@ -72,6 +79,7 @@
                             <span class="gender">Other</span>
                         </lable>
                     </div>
+                    <p class="warning" id="wargen"></p>
                 </div>
                 <div class="button">
                     <input type="submit" value="Register" name="reg">
@@ -82,6 +90,6 @@
 
         </div>
 
-   
+        <script src="../js/index.js"></script>
 </body>
 </html>
