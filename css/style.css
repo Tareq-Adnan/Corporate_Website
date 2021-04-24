@@ -540,6 +540,7 @@ form .user-details .input-box{
     margin: 20px 0 12px 0;
     width: calc(100% / 2 - 20px);
 }
+
 .user-details .input-box .details{
     display: block;
     font-weight: 500;

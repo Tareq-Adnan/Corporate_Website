@@ -16,16 +16,17 @@ var war4=document.getElementById('warconpass');
 var war5=document.getElementById('waremail');
 var war6=document.getElementById('warphone');
 var war7=document.getElementById('wargen');
+var war8=document.getElementById('waradd');
+var war9=document.getElementById('warcom');
 
 function Check(form){
-
+   
     var a=/^[A-Za-z]+$/;
     var b=document.getElementById('name').value;
     
     if(b.match(a)){
     bordername.style.borderColor ="Seagreen";
     war1.innerHTML="";
-    true;
     }
     else{
     war1.innerHTML="**Required and Alphabets Only";
@@ -34,61 +35,76 @@ function Check(form){
     }
 
     var c=document.getElementById('username').value;
-    if(c.match(a)){
-    war2.innerHTML="";
-    borderuser.style.borderColor ="Seagreen";
-    true;
-    }
-    else{
-    war2.innerHTML="**Required and Alphabets Only";
+if(c.length==0){
+    war2.innerHTML="**Required username";
     borderuser.style.borderColor ="red";
     return false;
     }
-if(form.sel.value.length==0){
+
+else if(form.sel.value.length==0){
         war6.innerHTML="**Required Mobile number";
         borderlang.style.borderColor ="red";
         return false;
         }
-        else{
-            war6.innerHTML="";
-            borderlang.style.borderColor ="Seagreen";
-        true;
-        }
+else if(form.password.value.length<6){
+            war3.innerHTML="**Required and Must be 6 to 12";
+            borderpass.style.borderColor ="red";
+            return false;
+            }
+else if(form.email.value.length == 0 || form.email.value.indexOf("@")<1 || form.email.value.indexOf(".")<2 ){
+                war5.innerHTML="**Must be a valid email";
+                borderemail.style.borderColor ="red";
+                return false;
+                } 
+else if(form.password.value!=form.conpassword.value){
+                war4.innerHTML="**password must be same";
+                borderconpass.style.borderColor ="red";
+                return false; 
+            }
 
-if(form.password.value.length<6){
-war3.innerHTML="**Required and Must be 6 to 12";
-borderpass.style.borderColor ="red";
-return false;
-}else{
-    war3.innerHTML="";
-borderpass.style.borderColor ="Seagreen";
-true;
-}
-
-
-if(form.password.value==form.conpassword.value){
-    war4.innerHTML="";
-borderconpass.style.borderColor ="Seagreen";
-    true;
-}
+else if(form.address.value.length==0){
+            war8.innerHTML="**Field can't be empty!";
+            form.address.style.borderColor ="red";
+            return false;
+         }        
+else if(form.comments.value.length==0){
+            war9.innerHTML="**Field can't be empty!";
+            form.comments.style.borderColor ="red";
+            return false;
+}       
 else{
-    war4.innerHTML="**password must be same";
-    borderconpass.style.borderColor ="red";
-    return false;
+    borderuser.style.borderColor ="Seagreen";
+    borderpass.style.borderColor ="Seagreen";
+    borderconpass.style.borderColor ="Seagreen";
+    borderemail.style.borderColor ="Seagreen";
+    bordernumber.style.borderColor ="Seagreen";
+    borderadd.style.borderColor ="Seagreen";
+    bordercomment.style.borderColor ="Seagreen";
+
+    war1.innerHTML="";
+    war2.innerHTML="";
+    war3.innerHTML="";
+    war4.innerHTML="";
+    war5.innerHTML="";
+    war6.innerHTML="";
+    war7.innerHTML="";
+    war8.innerHTML="";
+    war9.innerHTML="";
+
+    
 }
 
+var x=document.forms.gender;
 
-if(form.email.value.length == 0 || form.email.value.indexOf("@")<1 || form.email.value.indexOf(".")<2 ){
-    war5.innerHTML="**Must be a valid email";
-    borderemail.style.borderColor ="red";
-    return false;
+for(let i=0;i<x.length;i++){
+    if(x[i].checked==true){
+        return true;
     }
     else{
-        war5.innerHTML="";
-    borderemail.style.borderColor ="Seagreen";
-    true;
+        war7.innerHTML="**Requried!";
+        return false;
     }
-
+}
 
 }
 
