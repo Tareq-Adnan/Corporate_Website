@@ -1,4 +1,6 @@
 
+//form Validation
+
 var bordername=document.getElementById('name');
 var borderuser=document.getElementById('username');
 var borderpass=document.getElementById('password');
