@@ -2,7 +2,7 @@
 //form Validation
 
 var bordername=document.getElementById('name');
-var borderuser=document.getElementById('username');
+var borderuser=document.getElementById('lastname');
 var borderpass=document.getElementById('password');
 var borderconpass=document.getElementById('conpassword');
 var borderadd=document.getElementById('address');
@@ -22,23 +22,22 @@ var war8=document.getElementById('waradd');
 var war9=document.getElementById('warcom');
 
 function Check(form){
-   
     var a=/^[A-Za-z]+$/;
     var b=document.getElementById('name').value;
-    
-    if(b.match(a)){
-    bordername.style.borderColor ="Seagreen";
-    war1.innerHTML="";
-    }
-    else{
-    war1.innerHTML="**Required and Alphabets Only";
-    bordername.style.borderColor ="red";
-    return false;
-    }
 
-    var c=document.getElementById('username').value;
+    if(b.match(a)){
+        bordername.style.borderColor ="Seagreen";
+        war1.innerHTML="";
+        }
+        else{
+        war1.innerHTML="**Required and Alphabets Only";
+        bordername.style.borderColor ="red";
+        return false;
+        }
+
+    var c=document.getElementById('lastname').value;
 if(c.length==0){
-    war2.innerHTML="**Required username";
+    war2.innerHTML="**Required Last name";
     borderuser.style.borderColor ="red";
     return false;
     }
@@ -75,14 +74,6 @@ else if(form.comments.value.length==0){
             return false;
 }       
 else{
-    borderuser.style.borderColor ="Seagreen";
-    borderpass.style.borderColor ="Seagreen";
-    borderconpass.style.borderColor ="Seagreen";
-    borderemail.style.borderColor ="Seagreen";
-    bordernumber.style.borderColor ="Seagreen";
-    borderadd.style.borderColor ="Seagreen";
-    bordercomment.style.borderColor ="Seagreen";
-
     war1.innerHTML="";
     war2.innerHTML="";
     war3.innerHTML="";
@@ -92,6 +83,16 @@ else{
     war7.innerHTML="";
     war8.innerHTML="";
     war9.innerHTML="";
+
+    borderuser.style.borderColor ="Seagreen";
+    borderpass.style.borderColor ="Seagreen";
+    borderconpass.style.borderColor ="Seagreen";
+    borderemail.style.borderColor ="Seagreen";
+    bordernumber.style.borderColor ="Seagreen";
+    borderadd.style.borderColor ="Seagreen";
+    bordercomment.style.borderColor ="Seagreen";
+
+   
 
     
 }

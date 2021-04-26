@@ -47,9 +47,9 @@ if($conn->connect_error){
     die("Connection failed.".$conn->connect_error);
 }
 
-if(isset($_POST['fullname']) && isset($_POST['username']) && isset($_POST['email']) && isset($_POST['phone']) && isset($_POST['gender'])){
+if(isset($_POST['fullname']) && isset($_POST['lastname']) && isset($_POST['email']) && isset($_POST['phone']) && isset($_POST['gender'])){
 $fullname=$_POST['fullname'];
- $username=$_POST['username'];
+ $lastname=$_POST['lastname'];
  $password=$_POST['password'];
  $conpassword=$_POST['conpassword'];
  $email=$_POST['email'];
@@ -63,7 +63,7 @@ $fullname=$_POST['fullname'];
 <img src="../images/thnk1.gif" alt="">
 <?php
     
-    $sql = "INSERT INTO register_info(full_name,user_name,password,confirm_password,email,phone,address,comments,gender) VALUES('$fullname','$username','$password','$conpassword','$email','$phone','$address','$com','$gender')";
+    $sql = "INSERT INTO register_info(full_name,user_name,password,confirm_password,email,phone,address,comments,gender) VALUES('$fullname','$lastname','$password','$conpassword','$email','$phone','$address','$com','$gender')";
 
     if(mysqli_query($conn,$sql)){
         
